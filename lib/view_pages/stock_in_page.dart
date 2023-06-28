@@ -5,7 +5,7 @@ class StockInPage extends StatefulWidget {
   const StockInPage({super.key});
 
   @override
-  _StockInPageState createState() => _StockInPageState();
+  State<StockInPage> createState() => _StockInPageState();
 }
 
 class _StockInPageState extends State<StockInPage> {
@@ -101,6 +101,7 @@ class _StockInPageState extends State<StockInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.indigo,
         title: const Text('Stock In'),
       ),
       body: Container(
@@ -143,6 +144,9 @@ class _StockInPageState extends State<StockInPage> {
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo
+              ),
               onPressed: addStockIn,
               child: const Text('Stock In'),
             ),

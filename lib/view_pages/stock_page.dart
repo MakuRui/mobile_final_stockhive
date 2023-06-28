@@ -45,14 +45,14 @@ class _StockPageState extends State<StockPage> {
     // Navigate to the login page and replace the current route
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => const LoginPage()),
     );
   }
 
   void _navigateToStockInPage() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => StockInPage()),
+      MaterialPageRoute(builder: (context) => const StockInPage()),
     );
   }
 
@@ -150,8 +150,8 @@ class _StockPageState extends State<StockPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _navigateToStockInPage,
-        child: const Icon(Icons.add),
         backgroundColor: Colors.indigo,
+        child: const Icon(Icons.add),
       ),
       drawer: Drawer(
         child: ListView(
@@ -162,7 +162,7 @@ class _StockPageState extends State<StockPage> {
                 color: Colors.indigo,
               ),
               child: Text(
-                'Drawer Header',
+                'User',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -170,6 +170,7 @@ class _StockPageState extends State<StockPage> {
               ),
             ),
             ListTile(
+              leading: const Icon(Icons.logout),
               title: const Text('Logout'),
               onTap: _logout,
             ),
